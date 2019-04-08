@@ -4,6 +4,7 @@
         <div class="clip-area" :style="areaStyle">
           <div class="img-scale" :style="scaleStyle">
             <img :src="src" class="img" @load="imgLoaded();emit('load',$event)" @error="emit('error',$event)" :style="rotateStyle">
+            <slot name="overlay"></slot>
           </div>
             <div class="zoom-area shadow" :style="posObj">
                 <div class="extend outer" :style="exOuterStyle"></div>
